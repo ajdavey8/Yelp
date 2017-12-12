@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Add Your Business to Yelp</title>
+  </head>
+  <body>
+    <% form_with scope: :restaurant, local: true do |form| %>
+    <p>
+      <%=form.label :name %><br>
+      <%form.text_field :name %>
+    </p>
+
+    <p>
+      <%= form.label :location %> <br>
+      <%= form.text_field :location %>
+    </p>
+
+    <p>
+      <%= form.submit %>
+    </p>
+    <%end%>
+
+  </body>
+</html>
