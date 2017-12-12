@@ -26,9 +26,11 @@ ActiveRecord::Schema.define(version: 20171212125032) do
     t.text "body"
     t.integer "rating"
     t.string "title"
-    t.integer "restaurant_id"
+    t.bigint "restaurant_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["restaurant_id"], name: "index_reviews_on_restaurant_id"
+
   end
 
 end

@@ -4,8 +4,7 @@ class CreateReviews < ActiveRecord::Migration[5.1]
       t.text :body
       t.integer :rating
       t.string :title
-      t.integer :restaurant_id
-
+      t.belongs_to :restaurant, index: true 
       t.timestamps
     end
   end
