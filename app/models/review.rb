@@ -1,3 +1,3 @@
 class Review < ApplicationRecord
-  belongs_to :restaurant, index: true
+  belongs_to :restaurant
 end

@@ -26,11 +26,9 @@ ActiveRecord::Schema.define(version: 20171212161131) do
     t.text "body"
     t.integer "rating"
     t.string "title"
-    t.bigint "restaurant_id"
+    t.integer "restaurant_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["restaurant_id"], name: "index_reviews_on_restaurant_id"
-
   end
 
   create_table "users", force: :cascade do |t|
