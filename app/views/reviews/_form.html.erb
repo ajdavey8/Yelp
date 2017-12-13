@@ -1,4 +1,4 @@
-<%= form_with(model: review, local: true) do |form| %>
+<%= form_for([@restaurant, @review]) do |form| %>
   <% if review.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(review.errors.count, "error") %> prohibited this review from being saved:</h2>
@@ -27,10 +27,9 @@
   </div>
 
   <div class="field">
-  <%= form.label :restaurant %><br />
-  <%= form.select :restaurant_id, options_for_select(Restaurant.all.map{|s|[s.name, s.id]}) %>
-</div>
-
+    <%= form.label :restaurant_id %>
+    <%= form.text_field :restaurant_id, id: :review_restaurant_id %>
+  </div>
 
   <div class="actions">
     <%= form.submit %>
