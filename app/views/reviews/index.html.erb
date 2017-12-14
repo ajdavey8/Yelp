@@ -19,9 +19,9 @@
         <!-- <td><%= review.body %></td>
         <td><%= review.rating %></td>
         <td><%= review.title %></td> -->
-        <td><%= link_to 'Show', user_review_path(@user, review) %></td>
-        <td><%= link_to 'Edit', edit_user_review(@user, review) %></td>
-        <td><%= link_to 'Destroy', [@user, review], confirm: 'Are you sure?', method: :delete %></td>
+        <td><%= link_to 'Show', user_review_path(current_user, review) %></td>
+        <td><%= link_to 'Edit', edit_user_review(current_user, review) %></td>
+        <td><%= link_to 'Destroy', [current_user, review], confirm: 'Are you sure?', method: :delete %></td>
       </tr>
     <% end %>
   </tbody>
@@ -29,4 +29,4 @@
 
 <br>
 
-<%= link_to 'New Review', new_user_review_path(@user) %>
+<%= link_to 'New Review', new_user_review_path(current_user) %>

@@ -2,4 +2,4 @@
 
 <%= render 'form', review: @review %>
 
-<%= link_to 'Back', user_reviews_path(@user) %>
+<%= link_to 'Back', user_reviews_path(current_user) %>

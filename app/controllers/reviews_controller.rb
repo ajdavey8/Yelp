@@ -80,7 +80,7 @@ class ReviewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def review_params
-      params.require(:review).permit(:body, :rating, :title, :restaurant_id)
+      params.require(:review).permit(:body, :rating, :title, :restaurant_id, :user_id)
     end
 
 
