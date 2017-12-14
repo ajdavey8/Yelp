@@ -26,6 +26,12 @@
     <%= form.text_field :title, id: :review_title %>
   </div>
 
+  <div class="field">
+  <%= form.label :restaurant %><br />
+  <%= form.select :restaurant_id, options_for_select(Restaurant.all.map{|s|[s.name, s.id]}) %>
+</div>
+
+
   <div class="actions">
     <%= form.submit %>
   </div>
