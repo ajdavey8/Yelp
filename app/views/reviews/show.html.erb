@@ -1,19 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @review.body %>
-</p>
 
-<p>
-  <strong>Rating:</strong>
-  <%= @review.rating %>
-</p>
 
-<p>
+  <p>
   <strong>Title:</strong>
   <%= @review.title %>
-</p>
+    </p>
+
+  <p>
+  <strong>Body:</strong>
+  <%= @review.body %>
+  </p>
+
+  <p>
+  <strong>Rating:</strong>
+  <%= @review.rating %>
+  </p>
+
+
 
 <%= link_to 'Edit', edit_restaurant_review_path(@restaurant, @review) %> |
 <%= link_to 'Back', restaurant_reviews_path(@restaurant) %>

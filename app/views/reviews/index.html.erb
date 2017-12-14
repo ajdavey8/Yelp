@@ -5,9 +5,9 @@
 <table>
   <thead>
     <tr>
-      <th>Body</th>
-      <th>Rating</th>
       <th>Title</th>
+      <th>Rating</th>
+      <th>Review</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,9 +16,9 @@
     <% @reviews.each do |review| %>
       <tr>
 
-        <!-- <td><%= review.body %></td>
+        <td><%= review.title %></td>
         <td><%= review.rating %></td>
-        <td><%= review.title %></td> -->
+        <td><%=review.body.slice(0,100)%></td>
         <td><%= link_to 'Show', restaurant_review_path(@restaurant, review) %></td>
         <td><%= link_to 'Edit', edit_restaurant_review_path(@restaurant, review) %></td>
         <td><%= link_to 'Destroy', [@restaurant, review], confirm: 'Are you sure?', method: :delete %></td>
