@@ -6,6 +6,9 @@ img {
     }
 </style>
 <p>
+  <img src="<%= @restaurant.image %>" alt="">
+</p>
+<p>
   <strong>Name:</strong>
   <%= @restaurant.name %>
 </p>
@@ -25,11 +28,6 @@ img {
   <%= @restaurant.description %>
 </p>
 
-<p>
-  
-  <img src="<%= @restaurant.image %>" alt="">
-
-</p>
 
 <%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
 <%= link_to 'Back', restaurants_path %>
