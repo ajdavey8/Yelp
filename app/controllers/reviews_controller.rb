@@ -17,27 +17,12 @@ class ReviewsController < ApplicationController
 
 
   def show
-    @reviews = @restaurant.reviews.find(params[:id])
+     @reviews = @restaurant.reviews.find(params[:id])
   end
-
-
-
-
-
-#   def show
-# <<<<<<< HEAD
-#     @review = @restaurant.reviews.find(params[:id])
-# =======
-#     @review = current_user.reviews.find(params[:id])
-# >>>>>>> nonloso
-#   end
-
-
 
 
   # GET /reviews/new
   def new
-    @review = @restaurant.reviews.new
     @review = current_user.reviews.new
   end
 

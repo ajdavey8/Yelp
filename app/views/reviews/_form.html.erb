@@ -28,12 +28,13 @@
 
   <div class="field">
     <%= form.label :restaurant_id %>
-    <%= form.hidden_field :restaurant_id, id: :review_restaurant_id %>
+    <%= form.text_field :restaurant_id, id: :review_restaurant_id %>
   </div>
 
   <div class="field">
     <%= form.label :user_id %>
     <%= form.text_field :user_id, id: :review_user_id %>
+  </div>
 
   <div class="actions">
     <%= form.submit %>
