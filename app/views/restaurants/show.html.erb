@@ -1,5 +1,10 @@
 <p id="notice"><%= notice %></p>
-
+<style media="screen">
+img {
+      width: 500px;
+      height: auto;
+    }
+</style>
 <p>
   <strong>Name:</strong>
   <%= @restaurant.name %>
@@ -21,7 +26,7 @@
 </p>
 
 <p>
-  <strong>Image:</strong>
+  
   <img src="<%= @restaurant.image %>" alt="">
 
 </p>
