@@ -17,6 +17,8 @@ gem 'omniauth-facebook'
 
 gem 'dotenv-rails', :groups => [:development, :test]
 
+gem "fog-aws"
+
 gem 'activerecord'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
