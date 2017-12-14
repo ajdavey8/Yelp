@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+
   before_action :set_review, only: [:show, :edit, :update, :destroy]
 
   before_action :load_restaurant
@@ -6,23 +7,41 @@ class ReviewsController < ApplicationController
   # GET /reviews
   # GET /reviews.json
   def index
+<<<<<<< HEAD
     @reviews = @restaurant.reviews.all
+=======
+    @reviews = Review.all
+    @reviews = current_user.reviews.all
+    p current_user
+>>>>>>> nonloso
   end
 
   # GET /reviews/1
   # GET /reviews/1.json
   def show
+<<<<<<< HEAD
     @review = @restaurant.reviews.find(params[:id])
+=======
+    @review = current_user.reviews.find(params[:id])
+>>>>>>> nonloso
   end
 
   # GET /reviews/new
   def new
+<<<<<<< HEAD
     @review = @restaurant.reviews.new
+=======
+    @review = current_user.reviews.new
+>>>>>>> nonloso
   end
 
   # GET /reviews/1/edit
   def edit
+<<<<<<< HEAD
     @review = @restaurant.reviews.find(params[:id])
+=======
+    @review = current_user.reviews.find(params[:id])
+>>>>>>> nonloso
   end
 
   # POST /reviews
@@ -75,7 +94,7 @@ class ReviewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def review_params
-      params.require(:review).permit(:body, :rating, :title, :restaurant_id)
+      params.require(:review).permit(:body, :rating, :title, :restaurant_id, :user_id)
     end
 
     def load_restaurant

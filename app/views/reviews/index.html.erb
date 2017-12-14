@@ -15,11 +15,13 @@
   <tbody>
     <% @reviews.each do |review| %>
       <tr>
-        <td><%= review.body %></td>
+
+        <!-- <td><%= review.body %></td>
         <td><%= review.rating %></td>
-        <td><%= review.title %></td>
-        <td><%= link_to 'Show', restaurant_review_path(@restaurant, review) %></td>
-        <td><%= link_to 'Edit', edit_restaurant_review_path(@restaurant, review) %></td>
+        <td><%= review.title %></td> -->
+        <td><%= link_to 'Show', user_review_path(current_user, review) %></td>
+        <td><%= link_to 'Edit', edit_user_review(current_user, review) %></td>
+        <td><%= link_to 'Destroy', [current_user, review], confirm: 'Are you sure?', method: :delete %></td>
       </tr>
     <% end %>
   </tbody>
