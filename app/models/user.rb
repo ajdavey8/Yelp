@@ -3,6 +3,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :reviews
-  has_may :restaurants, :through => :reviews
+  has_many :restaurants, :through => :reviews
 
 end

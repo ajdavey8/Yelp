@@ -7,48 +7,51 @@ class ReviewsController < ApplicationController
   # GET /reviews
   # GET /reviews.json
   def index
-<<<<<<< HEAD
     @reviews = @restaurant.reviews.all
-=======
-    @reviews = Review.all
+
     @reviews = current_user.reviews.all
-    p current_user
->>>>>>> nonloso
   end
 
   # GET /reviews/1
   # GET /reviews/1.json
+
+
   def show
-<<<<<<< HEAD
-    @review = @restaurant.reviews.find(params[:id])
-=======
-    @review = current_user.reviews.find(params[:id])
->>>>>>> nonloso
+    @reviews = @restaurant.reviews.find(params[:id])
   end
+
+
+
+
+
+#   def show
+# <<<<<<< HEAD
+#     @review = @restaurant.reviews.find(params[:id])
+# =======
+#     @review = current_user.reviews.find(params[:id])
+# >>>>>>> nonloso
+#   end
+
+
+
 
   # GET /reviews/new
   def new
-<<<<<<< HEAD
     @review = @restaurant.reviews.new
-=======
     @review = current_user.reviews.new
->>>>>>> nonloso
   end
 
   # GET /reviews/1/edit
   def edit
-<<<<<<< HEAD
     @review = @restaurant.reviews.find(params[:id])
-=======
     @review = current_user.reviews.find(params[:id])
->>>>>>> nonloso
   end
 
   # POST /reviews
   # POST /reviews.json
   def create
     @review = @restaurant.reviews.new(review_params)
-
+    p current_user
     respond_to do |format|
       if @review.save
         format.html { redirect_to [@restaurant, @review], notice: 'Review was successfully created.' }
