@@ -17,7 +17,6 @@ class ReviewsController < ApplicationController
 
   # GET /reviews/new
   def new
-    p @restaurant
     @review = @restaurant.reviews.new
   end
 
@@ -81,6 +80,5 @@ class ReviewsController < ApplicationController
 
     def load_restaurant
       @restaurant = Restaurant.find(params[:restaurant_id])
-      p @restaurant
     end
 end
