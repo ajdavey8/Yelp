@@ -22,7 +22,8 @@
 
 <p>
   <strong>Image:</strong>
-  <%= @restaurant.image %>
+  <img src="<%= @restaurant.image %>" alt="">
+
 </p>
 
 <%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |

@@ -11,6 +11,12 @@ gem 'rails', '~> 5.1.4'
 
 gem 'devise'
 
+gem 'carrierwave', '~> 1.0.0'
+
+gem 'omniauth-facebook'
+
+gem 'dotenv-rails', :groups => [:development, :test]
+
 gem 'activerecord'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
